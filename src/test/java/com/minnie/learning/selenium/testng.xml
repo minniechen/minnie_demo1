@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite1">
+    <parameter name="test1" value="testng" /> <!--定义test1的value-->
+    <test verbose="2" name="RC 1">
+        <classes>
+             <class name="com.minnie.learning.selenium.TestBaidu" />
+        </classes>
+    </test>
+    <test  name="RC 2">
+        <classes>
+            <class name="com.minnie.learning.selenium.TestNgTest" />
+        </classes>
+    </test>
+</suite>
