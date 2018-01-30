@@ -5,6 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -16,7 +17,9 @@ public class TestNgTest {
 
     @BeforeClass
     public void setUp() throws Exception{
-        driver= new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("C:\\Users\\WEIYK\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+        driver= new ChromeDriver(options);
         baseUrl= "http://www.baidu.com";
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
     }
